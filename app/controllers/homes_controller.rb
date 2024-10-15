@@ -1,13 +1,7 @@
 class HomesController < ApplicationController
-  def new
+  def top
   end
 
-  def show
-  end
-
-  def edit
-  end
-
-  def index
+  def about
   end
 end
