@@ -1,0 +1,12 @@
+<h1>Editing Book</h1>
+<%= form_with url: book_path(book.id) do |f| %>
+  <P>Title</P>
+  <%= f.text_field :title %>
+  <P>Opinion</P>
+  <%= f.text_area :body %>
+  <%= f.submit 'Update Book' %>
+  
+  <%= link_to "show" %>
+  <%= "/" %>
+  <%= link_to "Back" %>
+<% end %>
