@@ -3,8 +3,16 @@
 <div>
     <%="Title" %>
     <%="Opinion" %>
-    
 </div>
+
+<% @books.each do |book| %>
 <div>
-    
+  <%= link_to user_path(@user) do %>
+  <%=image_tag @user.get_image  %>
+  <% end %>
+
+    <%= link_to book.title, book_path(book.id)  %>
+    <%= book.body %>
+
+<% end %>
 </div>
