@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  def new
-  end
 
   def edit
     @user=User.find(params[:id])
@@ -17,17 +15,16 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user=User.find(params[:id])
-    @user.update(user_params)
+    user=User.find(params[:id])
+    user.update(user_params)
     flash[:notice] = "You have updated user successfully."
     redirect_to user_path
   end
   
- 
  private
 
   def user_params
-    params.require(:user).permit(:name, :profile_image, :introduction)
+    params.require(:user).permit(:name, :image, :introduction)
   end
   
 end

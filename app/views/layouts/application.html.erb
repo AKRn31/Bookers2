@@ -44,9 +44,10 @@
         </li>
       <% end %>
     </header>
-    
-    
-    <%= yield %>
+    <main>
+      <div><%= flash[:notice] %></div>
+      <%= yield %>
+    </main>
     <footer>
       CopyRight Infratop.inc
     </footer>
