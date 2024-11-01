@@ -8,7 +8,7 @@
 <% end %>
 
 <h1>User info</h1>
-<%= image_tag current_user.get_image %>
+<%= image_tag current_user.get_profile_image(100,100) %>
 <p>name <%= current_user.name %></p>
 <p>introduction <%= current_user.introduction %></p>
 <% if current_user %>
