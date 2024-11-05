@@ -1,11 +1,15 @@
+<div class="container-fluid col-4 my-3">
+  <h1>welcome to <i class="fa-solid fa-book"></i>Bookers!!</h1>
+  <p>In <i class="fa-solid fa-book"></i>Bookers,<br>
 
-<h4>welcome to Bookers!!</h4>
-<p>In Bookers,<br>
+    you can share and exchange your opinions , inpressions , and emotions<br>
 
-you can share and exchange your opinions , inpressions , and emotions<br>
+    about various books!</p>
+</div>
+  <div class=>
+    <%= link_to "Log in", new_user_session_path, class: "btn btn-info btn-sm", style: "width: 500px;", role: "button" %>
+  </div>
+  <div>
+    <%= link_to "Sign in", new_user_registration_path, class: "btn btn-success btn-sm",  style: "width: 500px;",role: "button" %>
+  </div>
 
-about various books!</p>
-
-<%= link_to "Log in", new_user_session_path %>
-
-<%= link_to "Sign up", new_user_registration_path %>
