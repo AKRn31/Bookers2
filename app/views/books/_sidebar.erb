@@ -7,10 +7,11 @@
   </ul>
 <% end %>
 
-
       <h2>User info</h2>
         <%= image_tag current_user.get_profile_image(100,100) %>
-           <p>name <%= current_user.name %></p>
+       
+           name 
+           <%= current_user.name %>
            <p>introduction <%= current_user.introduction %></p>
         <% if current_user %>
         <button type="button" class="btn btn-outline-secondary " style="width: 300px; height: 38px;">
@@ -32,6 +33,6 @@
         <% end %>
         </div>
         <div class="col-md-1"></div>
-    </div>
+    </div></div>
   </div>
 </div>

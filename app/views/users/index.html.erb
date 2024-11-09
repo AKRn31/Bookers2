@@ -1,14 +1,14 @@
 <div class="container ">
   <div class="row"> 
-    <div class="col-md-3 mt-3">
+    <div class="col-md-3">
      <%= render 'books/sidebar',book: @book %>
-     
-       <div class="col-md-1"></div>
-         <div class="col-md-8 ">
+     </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-8 ">
       <h1>Users</h1>
 
       <% @users.each do |user| %>
-      <div>
+     
         <%= "image" %>
         <%= "name" %>
         
@@ -17,7 +17,7 @@
       
         <%= link_to "Show", user_path(user.id) %>
       </div>
-    </div></div>
+    </div>
   <% end %>
 </div></div>
 
