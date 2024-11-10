@@ -12,12 +12,12 @@
 
 <%= form_with model: @user, url: user_path(@user.id) do |f| %>
   <label for="inputName">Name</label>
-  <div class="pb-2"><%= f.text_field :name, autofocus:true, id:"inputName", placeholder: "Name" %></div>
+  <div class="pb-4"><%= f.text_field :name, autofocus:true, id:"inputName", placeholder: "Name" %></div>
   <label for="inputImage">Image</label>
-  <div class="pb-2"><%= f.file_field :profile_image, placeholder: "Image", accept: "image/*" %></div>
+  <div class="pb-4"><%= f.file_field :profile_image, placeholder: "Image", accept: "image/*" %></div>
   <div>introduction</div>
-  <div class="pb-2"><%= f.text_area:introduction %></div>
-   <button class="btn btn-secondary " type="submit">"Update User</button>
+  <div class="pb-4"><%= f.text_area:introduction %></div>
+   <button class="btn btn-secondary " type="submit">Update User</button>
   <% end %>
   </div>
 </div>
