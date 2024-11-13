@@ -23,7 +23,7 @@
         </table>
           
         <% if current_user %>
-        <a class="btn btn-outline-secondary btn-block"  href="<%= edit_user_path(current_user) %>">
+        <a class="btn btn-outline-secondary btn-block" href="<%= edit_user_path(current_user) %>">
           <i class="fa-solid fa-user-gear text-center"></i>
 　　　　</a>
         <% end %>
@@ -36,7 +36,8 @@
             <%= f.text_field :title %>
             <P>Opinion</P>
             <%= f.text_area :body %>
+            
       </div>
-          <button class="btn btn-success" type="submit">Create Book</button>
+          <a class="btn btn-success" type="submit"> Create Book</a>
         <% end %>
     </div>

@@ -4,18 +4,25 @@
   <div class="col-md-8">
   <h2>Book detail</h2>
   
-    <%= link_to books_path do %>
+  <% @books.each do |book| %>
+    <%= link_to books_path(book.id) do %>
     <div class="d-flex flex-row">
-     <div><%= image_tag @user.get_profile_image(100,100) %>
-     <p><%=  @user.name %></p></div>
+     <div><%= image_tag book.user.get_profile_image(100,100) %>
+     <p><%=  book.user.name %></p></div>
    <% end %>
    
-      <div class="col"><%= link_to @book.title, book_path %></div>
-      <div class="col"><%= @book.body %></div>
+      <div class="col"><%= link_to book.title, book_path %></div>
+      <div class="col"><%= book.body %></div>
   
-    <% if @book.user == current_user %>
-      <div class="col"><%= link_to "Edit", edit_book_path(@book) %></div>
-       <div class="col"><%= link_to "Destroy", @book, method: :delete %></div>
+  
+    <% if book.user == current_user %>
+      <div class="col">
+        <a class="btn btn-success" href="<%= edit_book_path(book) %>" role="button">Edit</a>
+      </div>
+      <div class="col">
+        <%= link_to "Destroy", book_path(book), method: :delete, class: "btn btn-danger", role: "button" %>
+      </div>
+  <% end %>
   <% end %>
 </div>
 </div>
