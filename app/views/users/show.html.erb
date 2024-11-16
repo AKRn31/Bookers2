@@ -1,6 +1,6 @@
 <div class="row ">
   <div class="col-md-3">
-      <h1>User info</h1>
+      <h2>User info</h2>
       <%= image_tag @user.get_profile_image(100,100) %>
       <table class="table">
         <tr>
@@ -12,12 +12,12 @@
           <th><%= @user.introduction %></th>
         </tr>
       </table>
-      <a class="btn btn-outline-secondary btn-block" href="<%= edit_user_path(current_user) %>">
+      <a class="btn btn-outline-secondary btn-block" href="<%= user_path(current_user) %>">
        <i class="fa-solid fa-user-gear text-center"></i>
       </a>
 
    
-    <h1>New book</h1>
+    <h2>New book</h2>
     <%= form_with model: @book do |f| %>
       <P>Title</P>
       <%= f.text_field :title %>
@@ -28,16 +28,17 @@
       </div>
     <% end %>
   </div>
+  
   <div class="offset-md-1"></div>
   <div class="col-md-8">
-    <h1>Books</h1>
+    <h2>Books</h2>
 
-  <table class="table text-start">
+  <table class="table">
    <thead>
      <tr>
-      <th scope="col-md-2"></th>
+      <th scope="col-md-3"></th>
       <th scope="col-md-4">Title</th>
-      <th scope="col-md-6">Opinion</th>
+      <th scope="col-md-5">Opinion</th>
      </tr>
   </thead>
   <% @books.each do |book| %>
@@ -50,8 +51,7 @@
       <td> <%= book.body %></td>
     </tr>
   </tdoby>　　　 
-   <% end %>
-   <% end %>
+   <% end %><% end %>
   </table>
  </div>
 </div>

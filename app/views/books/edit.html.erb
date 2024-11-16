@@ -1,3 +1,5 @@
+<div class="row">
+  <div class="mx-auto">
 <h1>Editing Book</h1>
 <% if @book.errors.any? %>
   <%= @book.errors.count %>error prohibited this obj from being saved:
@@ -9,15 +11,22 @@
 <% end %>
 
 <%= form_with model: @book do |f| %>
+<div>
   <P>Title</P>
   <%= f.text_field :title %>
-  <P>Opinion</P>
+</div>  
+<div>
+  <P class="pt-4">Opinion</P>
   <%= f.text_area :body %>
-  <%= f.submit 'Update Book' %>
-  
-  <%= link_to "show" %>
+</div>
+  <div class="py-3">
+  <button class="btn btn-success" type="submit">Update book</button>
+  </div>
+  <div>
+  <%= link_to "Show", book_path(@book) %>
   <%= "|" %>
-  <%= link_to "Back" %>
+  <%= link_to "Back", books_path %>
 <% end %>
+ </div>
 
-
+</div></div>
