@@ -33,6 +33,7 @@
 
       <div class="py-3">
         <h2>New book</h2>
+        
           <%= form_with model: book do |f| %>
           <div class="form-group">
             <label for="book_title">Title</label>
@@ -43,6 +44,7 @@
             <%= f.text_area :body , class: "form-control" %>
           </div>  
       </div>
-      <button class="btn btn-success" type="submit">Create Book</button>
+          <button class="btn btn-success" type="submit">Create Book</button>
         <% end %>
+        
     </div>
